@@ -28,6 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
     /* margin-bottom: 1rem; */
 }
 .container .user {
@@ -36,6 +37,7 @@ body {
     flex-direction: column;
     gap: 1rem;
     align-items: right;
+    /* position: relative; */
 }
 .main-comment {
     display: flex;
@@ -45,6 +47,11 @@ body {
     background-color: white;
 }
 .vote-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.vote {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,6 +79,21 @@ body {
     width: 40px;
 }
 .reply-btn {
+    background-color: transparent;
+    color: var(--moderateBlue);
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+}
+.reply-btn-mobile {
+    position: relative;
+    opacity: 0;
+    width: 0;
+    height: 0;
     background-color: transparent;
     color: var(--moderateBlue);
     font-weight: 700;
@@ -113,7 +135,7 @@ body {
     width: 40px;
 }
 .current-user textarea {
-    width: 80%;
+    width: 70%;
     border-color: var(--lightGray);
     outline-color: var(--lightGray);
 }
@@ -135,9 +157,21 @@ body {
     padding: 0.2rem 0.3rem;
     border-radius: 5px;
 }
+.send-btn-mobile {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
 .buttons {
     display: flex;
     gap: 1rem;
+}
+.buttons-mobile {
+    opacity: 0;
+    display: flex;
+    gap: 1rem;
+    width: 0;
+    height: 0;
 }
 .del-btn {
     background-color: transparent;

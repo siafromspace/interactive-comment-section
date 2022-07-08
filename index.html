@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="queries.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/f50cb12bbf.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Interactive comments section</title>
@@ -20,9 +21,12 @@
     <div class="user">
       <div class="main-comment">
         <div class="vote-comment">
-          <i class="fa-solid fa-minus"></i>
-          <span class="input" role="textbox" contenteditable="">0</span>
-          <i class="fa-solid fa-plus"></i>
+          <div class="vote">
+            <i class="fa-solid fa-minus"></i>
+            <span class="input" role="textbox" contenteditable="">0</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <button class="reply-btn-mobile"><img src="images/icon-reply.svg" alt=""> Reply</button>
         </div>
         <div class="comment-card">
           <div class="profile">
@@ -43,9 +47,12 @@
     <div class="user">
       <div class="main-comment">
         <div class="vote-comment">
-          <i class="fa-solid fa-minus"></i>
-          <span class="input" role="textbox" contenteditable="">0</span>
-          <i class="fa-solid fa-plus"></i>
+          <div class="vote">
+            <i class="fa-solid fa-minus"></i>
+            <span class="input" role="textbox" contenteditable="">0</span>
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <button class="reply-btn-mobile"><img src="images/icon-reply.svg" alt=""> Reply</button>
         </div>
         <div class="comment-card">
           <div class="profile">
@@ -64,9 +71,12 @@
       <div class="replies">
         <div class="reply-comment">
           <div class="vote-comment">
-            <i class="fa-solid fa-minus"></i>
-            <span class="input" role="textbox" contenteditable="">0</span>
-            <i class="fa-solid fa-plus"></i>
+            <div class="vote">
+              <i class="fa-solid fa-minus"></i>
+              <span class="input" role="textbox" contenteditable="">0</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <button class="reply-btn-mobile"><img src="images/icon-reply.svg" alt=""> Reply</button>
           </div>
           <div class="comment-card">
             <div class="profile">
@@ -84,9 +94,15 @@
         </div>
         <div class="reply-comment">
           <div class="vote-comment">
-            <i class="fa-solid fa-minus"></i>
-            <span class="input" role="textbox" contenteditable="">0</span>
-            <i class="fa-solid fa-plus"></i>
+            <div class="vote">
+              <i class="fa-solid fa-minus"></i>
+              <span class="input" role="textbox" contenteditable="">0</span>
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="buttons-mobile">
+              <button class="del-btn"><img src="images/icon-delete.svg" alt="">Delete</button>
+              <button class="edit-btn"><img src="images/icon-edit.svg" alt="">Edit</button>
+            </div>
           </div>
           <div class="comment-card">
             <div class="profile">
@@ -111,6 +127,10 @@
       <img src="images/avatars/image-juliusomo.png" alt="">
       <textarea name="user-comment" id="userComment" cols="" rows="5" placeholder="Add a comment"></textarea>
       <button class="send-btn">Send</button>
+      <div class="send-btn-mobile">
+        <img src="images/avatars/image-juliusomo.png" alt="">
+        <button class="send-btn">Send</button>
+      </div>
     </div>
   </div>
 </body>
