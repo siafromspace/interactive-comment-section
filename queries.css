@@ -60,6 +60,10 @@
         width: 95%;
         margin-left: 5%;
     }
+    .reply-comment.current-user {
+        width: 95%;
+        margin-left: 5%;
+    }
     .current-user {
         width: 90%;
         height: 100%;

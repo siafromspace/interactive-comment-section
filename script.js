@@ -82,7 +82,22 @@ replyBtn.forEach(btn => {
   btn.addEventListener('click', () => {
     const replies = btn.parentNode.parentNode.parentNode.nextElementSibling
     console.log(btn.parentNode.parentNode.parentNode.nextElementSibling)
-    replies.insertAdjacentHTML('beforeend', `<div class="reply-comment">
+    replies.insertAdjacentHTML('beforeend', `<div class="reply-comment current-user" style="width: 90%;>
+    <img src="images/avatars/image-juliusomo.png" alt="">
+    <textarea name="user-comment" id="userComment" cols="" rows="5" placeholder="Add a comment"></textarea>
+    <button class="send-btn">Send</button>
+    <div class="send-btn-mobile">
+      <img src="images/avatars/image-juliusomo.png" alt="">
+      <button class="send-btn">Send</button>
+    </div>
+  </div>`)
+  })
+})
+replyBtnMobile.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const replies = btn.parentNode.parentNode.nextElementSibling
+    console.log(btn.parentNode.parentNode.nextElementSibling)
+    replies.insertAdjacentHTML('beforeend', `<div class="reply-comment current-user" style="width: 90%;>
     <img src="images/avatars/image-juliusomo.png" alt="">
     <textarea name="user-comment" id="userComment" cols="" rows="5" placeholder="Add a comment"></textarea>
     <button class="send-btn">Send</button>
