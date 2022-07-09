@@ -7,6 +7,10 @@ const sendBtn = document.querySelectorAll('.send-btn')
 const newComment = document.querySelector('.current')
 const userComment = document.getElementById('userComment')
 const delComment = document.querySelector('.delete-btn')
+const replyBtn = document.querySelectorAll('.reply-btn')
+const replyBtnMobile = document.querySelectorAll('.reply-btn-mobile')
+// const replies = document.querySelectorAll('.replies')
+
 
 //del modal visibilty
 delBtn.forEach(btn => {
@@ -72,3 +76,20 @@ sendBtn.forEach(btn => {
 
 //delete comment
 // delComment.addEventListener('click', )
+
+//reply comment
+replyBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const replies = btn.parentNode.parentNode.parentNode.nextElementSibling
+    console.log(btn.parentNode.parentNode.parentNode.nextElementSibling)
+    replies.insertAdjacentHTML('beforeend', `<div class="reply-comment">
+    <img src="images/avatars/image-juliusomo.png" alt="">
+    <textarea name="user-comment" id="userComment" cols="" rows="5" placeholder="Add a comment"></textarea>
+    <button class="send-btn">Send</button>
+    <div class="send-btn-mobile">
+      <img src="images/avatars/image-juliusomo.png" alt="">
+      <button class="send-btn">Send</button>
+    </div>
+  </div>`)
+  })
+})
